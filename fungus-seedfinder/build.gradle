@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'me.fanda857'
+version '1.0'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.seedfinding.com/repository/maven-public/' }
+}
+
+dependencies {
+    implementation 'com.seedfinding:mc_core:1.171.0'
+    implementation 'com.seedfinding:mc_reversal:1.171.0'
+    implementation 'com.seedfinding:latticg:1.0.0'
+}
+
+application {
+    mainClass = 'me.fanda857.fungus.FungusSeedFinder'
+}
