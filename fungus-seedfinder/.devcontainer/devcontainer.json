@@ -1,0 +1,9 @@
+{
+  "name": "Fungus Seedfinder Dev Container",
+  "image": "mcr.microsoft.com/vscode/devcontainers/java:17",
+  "features": {
+    "gradle": {}
+  },
+  "postCreateCommand": "gradle build",
+  "remoteUser": "vscode"
+}
