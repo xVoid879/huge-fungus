@@ -3,20 +3,32 @@ plugins {
     id 'application'
 }
 
-group 'me.fanda857'
-version '1.0'
+group = 'com.yourname.fungusseedfinder'
+version = '1.0.0'
 
 repositories {
     mavenCentral()
-    maven { url 'https://maven.seedfinding.com/repository/maven-public/' }
+    maven {
+        url 'https://maven.seedfinding.com/repository/maven-public'
+    }
 }
 
 dependencies {
     implementation 'com.seedfinding:mc_core:1.171.0'
     implementation 'com.seedfinding:mc_reversal:1.171.0'
     implementation 'com.seedfinding:latticg:1.0.0'
+
+    testImplementation 'junit:junit:4.13.2'
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
 }
 
 application {
+    // Replace with your Java main class fully qualified name here, e.g.
+    // 'com.yourname.fungusseedfinder.Main'
     mainClass = 'me.fanda857.fungus.FungusSeedFinder'
 }
